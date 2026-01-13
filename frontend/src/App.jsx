@@ -13,8 +13,7 @@ import { Pie, Bar } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const API_BASE = import.meta.env.VITE_API_BASE;
-
+const API_BASE = "https://sentiment-dashboard-cx9c.onrender.com";
 
 
 export default function App() {
