@@ -13,7 +13,8 @@ import { Pie, Bar } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://sentiment-dashboard-cx9c.onrender.com";
+
 
 export default function App() {
   const [text, setText] = useState("");
