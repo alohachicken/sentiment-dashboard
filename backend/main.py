@@ -9,18 +9,20 @@ from backend.db import init_db, insert_analysis, get_history
 
 app = FastAPI()
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://sentiment-dashboard-neon.vercel.app",
+        "https://sentiment-dashboard-neon.vercel.app",  # <-- your Vercel domain
     ],
-    allow_origin_regex=r"https://.*\.vercel\.app",
-    allow_credentials=False,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
 
 init_db()
 
