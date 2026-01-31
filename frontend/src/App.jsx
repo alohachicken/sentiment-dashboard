@@ -36,9 +36,20 @@ export default function App() {
   );
 
   const pieData = {
-    labels: ["Positive", "Neutral", "Negative"],
-    datasets: [{ data: [counts.positive, counts.neutral, counts.negative] }],
-  };
+  labels: ["Positive", "Neutral", "Negative"],
+  datasets: [
+    {
+      data: [counts.positive, counts.neutral, counts.negative],
+      backgroundColor: [
+        "#2ecc71", // green = positive
+        "#95a5a6", // grey = neutral
+        "#e74c3c", // red = negative
+      ],
+      borderColor: "#ffffff",
+      borderWidth: 2,
+    },
+  ],
+};
 
   const last10 = history.slice(0, 10).reverse();
 
